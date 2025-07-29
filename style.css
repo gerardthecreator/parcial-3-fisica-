@@ -1,6 +1,3 @@
-/* --- Importación de Fuentes --- */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;700&display=swap');
-
 /* --- Variables de Color (Tema Pizarra) --- */
 :root {
     --pizarra-bg: #2c3e50;
@@ -10,6 +7,7 @@
     --tiza-verde: #2ecc71;
     --tiza-amarilla: #f1c40f;
     --borde-seccion: #34495e;
+    --canvas-bg: #fdfdfd;
 }
 
 /* --- Estilos Globales --- */
@@ -37,7 +35,7 @@ header, footer {
 header h1 {
     font-family: 'Anton', sans-serif;
     color: var(--tiza-amarilla);
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -48,7 +46,7 @@ main {
     margin: 2rem auto;
     padding: 1rem;
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 /* --- Estilo de las Secciones (Problemas) --- */
@@ -93,9 +91,23 @@ p.enunciado {
     padding-left: 1rem;
 }
 
-ul {
+ul, ol {
     list-style-position: inside;
     padding-left: 1rem;
+}
+
+/* --- Estilo para la caja de razonamiento --- */
+.razonamiento {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-left: 5px solid var(--tiza-amarilla);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.razonamiento h3 {
+    color: var(--tiza-amarilla);
+    margin-top: 0;
 }
 
 /* --- Clases para resaltar texto --- */
@@ -111,8 +123,8 @@ ul {
     color: var(--tiza-roja);
     font-style: italic;
 }
-.area1 { color: var(--tiza-azul); }
-.area2 { color: var(--tiza-roja); }
+.area1 { color: var(--tiza-azul); font-weight: bold; }
+.area2 { color: var(--tiza-roja); font-weight: bold; }
 
 
 /* --- Cajas de Fórmulas y Cálculos --- */
@@ -122,13 +134,15 @@ ul {
     padding: 1rem;
     margin: 1rem 0;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 5px;
+    overflow-x: auto;
 }
 
-.calculo, .resultado {
-    padding: 0.5rem;
-    margin-left: 2rem;
+.calculo {
+    padding: 0.2rem 0;
+    margin-left: 1rem;
+    color: #bdc3c7;
 }
 
 .resultado {
@@ -140,184 +154,15 @@ ul {
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     border-radius: 5px;
+    background-color: rgba(46, 204, 113, 0.1);
 }
 
 /* --- Estilo del Canvas --- */
 canvas {
-    background-color: #ecf0f1; /* Fondo blanco para que se vea el dibujo */
+    background-color: var(--canvas-bg);
     border-radius: 5px;
     display: block;
     margin: 1.5rem auto;
     max-width: 100%;
-}```
-
----
-
-### 3. `script.js`
-
-Este archivo JavaScript se encarga de dibujar los diagramas en los elementos `<canvas>`, haciendo la explicación visual e intuitiva.
-
-```javascript
-// Espera a que todo el contenido del DOM esté cargado antes de ejecutar el script
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Llama a las funciones para dibujar en cada canvas
-    drawProblema5();
-    drawProblema7();
-
-});
-
-/**
- * Dibuja el diagrama de cuerpo libre para el Problema 5: Plano Inclinado.
- */
-function drawProblema5() {
-    const canvas = document.getElementById('canvas-problema5');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    // Colores
-    const COLOR_PLANO = '#34495e';
-    const COLOR_BLOQUE = '#3498db';
-    const COLOR_FUERZA = '#e74c3c';
-    const COLOR_GRAVEDAD = '#2ecc71';
-    const COLOR_NORMAL = '#f1c40f';
-    const COLOR_FRICCION = '#e67e22';
-    const COLOR_TEXTO = '#000';
-
-    // Limpiar canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = 'bold 14px Oswald';
-
-    // Dibujar el plano inclinado (triángulo)
-    ctx.beginPath();
-    ctx.moveTo(50, 300);
-    ctx.lineTo(450, 300);
-    ctx.lineTo(450, 150);
-    ctx.closePath();
-    ctx.fillStyle = COLOR_PLANO;
-    ctx.fill();
-    ctx.stroke();
-
-    // Dibujar el bloque
-    ctx.save();
-    ctx.translate(250, 225); // Mover origen al centro del plano
-    ctx.rotate(-Math.PI / 180 * 20.5); // Rotar para alinear con el plano (aprox 37 deg)
-    ctx.fillStyle = COLOR_BLOQUE;
-    ctx.fillRect(-25, -15, 50, 30);
-    
-    // Dibujar vectores de fuerza
-    // Fuerza Aplicada
-    drawArrow(ctx, 25, 0, 100, 0, COLOR_FUERZA, 'F = 40N');
-    // Fuerza de Fricción
-    drawArrow(ctx, -25, 0, -75, 0, COLOR_FRICCION, 'f_k');
-    // Fuerza Normal
-    drawArrow(ctx, 0, -15, 0, -60, COLOR_NORMAL, 'N');
-    
-    // Gravedad (se dibuja sin rotar)
-    ctx.restore(); // Volver al sistema de coordenadas original
-    ctx.save();
-    ctx.translate(250, 225); // Mover al centro del bloque
-    drawArrow(ctx, 0, 0, 0, 70, COLOR_GRAVEDAD, 'mg');
-    ctx.restore();
-
-    // Ángulo
-    ctx.beginPath();
-    ctx.arc(450, 300, 40, Math.PI, Math.PI + Math.atan(150/400), false);
-    ctx.stroke();
-    ctx.fillStyle = COLOR_TEXTO;
-    ctx.fillText('37°', 390, 285);
-}
-
-/**
- * Dibuja el gráfico Fuerza vs. Posición para el Problema 7.
- */
-function drawProblema7() {
-    const canvas = document.getElementById('canvas-problema7');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    const xOffset = 50;
-    const yOffset = 250;
-    const scaleX = 80;
-    const scaleY = 20;
-
-    // Limpiar
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = '14px Oswald';
-    ctx.lineWidth = 2;
-
-    // Dibujar áreas bajo la curva
-    // Área 1: Rectángulo
-    ctx.fillStyle = 'rgba(52, 152, 219, 0.5)'; // Azul semi-transparente
-    ctx.fillRect(xOffset, yOffset - 10 * scaleY, 4 * scaleX, 10 * scaleY);
-    
-    // Área 2: Triángulo
-    ctx.beginPath();
-    ctx.moveTo(xOffset + 4 * scaleX, yOffset);
-    ctx.lineTo(xOffset + 4 * scaleX, yOffset - 10 * scaleY);
-    ctx.lineTo(xOffset + 5 * scaleX, yOffset);
-    ctx.closePath();
-    ctx.fillStyle = 'rgba(231, 76, 60, 0.5)'; // Rojo semi-transparente
-    ctx.fill();
-
-    // Dibujar ejes
-    ctx.strokeStyle = '#ecf0f1';
-    drawArrow(ctx, xOffset, yOffset, canvas.width - 20, yOffset, '#ecf0f1');
-    drawArrow(ctx, xOffset, yOffset, xOffset, 20, '#ecf0f1');
-
-    // Etiquetas de los ejes
-    ctx.fillStyle = '#ecf0f1';
-    ctx.fillText('Posición x (m)', canvas.width / 2, yOffset + 30);
-    ctx.save();
-    ctx.rotate(-Math.PI / 2);
-    ctx.fillText('Fuerza F (N)', -150, xOffset - 20);
-    ctx.restore();
-
-    // Marcas en los ejes
-    for (let i = 0; i <= 5; i++) {
-        ctx.fillText(i, xOffset + i * scaleX - 5, yOffset + 20);
-    }
-    ctx.fillText('10', xOffset - 25, yOffset - 10 * scaleY + 5);
-    
-    // Etiquetas de las áreas
-    ctx.fillStyle = '#fff';
-    ctx.font = 'bold 16px Anton';
-    ctx.fillText('Área 1', xOffset + 1.5 * scaleX, yOffset - 5 * scaleY);
-    ctx.fillText('Área 2', xOffset + 4.1 * scaleX, yOffset - 5 * scaleY);
-}
-
-
-/**
- * Función de ayuda para dibujar una flecha en el canvas.
- */
-function drawArrow(ctx, fromx, fromy, tox, toy, color, text = '') {
-    const headlen = 10; // length of head in pixels
-    const dx = tox - fromx;
-    const dy = toy - fromy;
-    const angle = Math.atan2(dy, dx);
-    
-    ctx.save();
-    ctx.strokeStyle = color;
-    ctx.fillStyle = color;
-    
-    // Línea
-    ctx.beginPath();
-    ctx.moveTo(fromx, fromy);
-    ctx.lineTo(tox, toy);
-    ctx.stroke();
-    
-    // Cabeza de la flecha
-    ctx.beginPath();
-    ctx.moveTo(tox, toy);
-    ctx.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
-    ctx.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
-    ctx.closePath();
-    ctx.fill();
-
-    // Texto
-    if (text) {
-        ctx.font = 'bold 16px Oswald';
-        ctx.fillText(text, tox + 10, toy + 5);
-    }
-    ctx.restore();
+    border: 1px solid #7f8c8d;
 }
