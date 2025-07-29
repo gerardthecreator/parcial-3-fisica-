@@ -26,15 +26,14 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
 
-    <!-- Nuestro CSS y JS -->
+    <!-- Nuestro CSS -->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header>
         <h1>Pizarra de Física: Examen de Trabajo y Energía</h1>
-        <p>Análisis y resolución paso a paso de cada problema.</p>
+        <p>Análisis y resolución completa con el razonamiento detrás de cada decisión.</p>
     </header>
 
     <main>
@@ -43,30 +42,19 @@
             <article>
                 <h2>Problema 1: Trabajo de una Fuerza Constante</h2>
                 <p class="enunciado">Un obrero empuja una caja de 60kg una distancia de 10 m sobre una superficie horizontal, aplicando una fuerza constante de 150 N en la dirección del movimiento. ¿Cuál es el trabajo realizado por el obrero sobre la caja?</p>
-                
-                <h3>1. ¿Qué nos piden?</h3>
-                <p>Calcular el <span class="importante">Trabajo (W)</span> que realiza la fuerza del obrero.</p>
-                
-                <h3>2. Datos Clave</h3>
+                <div class="razonamiento">
+                    <h3>Razonamiento del Profesor</h3>
+                    <p>El objetivo es calcular el <span class="importante">Trabajo (W)</span>. La fórmula es $W = F \cdot d \cdot \cos(\theta)$. Mi plan es: <strong>1. Identificar</strong> los valores F, d y $\theta$. <strong>2. Sustituir</strong> en la fórmula. <strong>3. Calcular</strong>.</p>
+                </div>
+                <h3>1. Identificación de Datos</h3>
                 <ul>
-                    <li>Fuerza aplicada ($F$): <span class="valor">150 N</span></li>
-                    <li>Distancia ($d$): <span class="valor">10 m</span></li>
-                    <li>Ángulo ($\theta$): <span class="valor">0°</span> (la fuerza y el movimiento van en la <span class="importante">misma dirección</span>).</li>
-                    <li>Masa ($m$): 60 kg (¡Ojo! Este es un <span class="distractor">distractor</span> para esta pregunta).</li>
+                    <li>Fuerza ($F$): <span class="valor">150 N</span>.</li>
+                    <li>Distancia ($d$): <span class="valor">10 m</span>.</li>
+                    <li>Ángulo ($\theta$): <span class="valor">0°</span> (deducido de <span class="importante">"en la dirección del movimiento"</span>).</li>
                 </ul>
-
-                <h3>3. Principio Físico</h3>
-                <p>Usamos la definición fundamental de Trabajo para una fuerza constante. El trabajo es la energía transferida por una fuerza a lo largo de un desplazamiento.</p>
-                <p class="formula-box">$$ W = F \cdot d \cdot \cos(\theta) $$</p>
-
-                <h3>4. Resolución en la Pizarra</h3>
-                <p>Sustituimos los valores en nuestra ecuación. Como el ángulo $\theta$ es 0°, su coseno es 1, lo que simplifica el cálculo.</p>
-                <p class="calculo"> $ W = 150 \, \text{N} \cdot 10 \, \text{m} \cdot \cos(0^\circ) $ </p>
-                <p class="calculo"> $ W = 150 \cdot 10 \cdot 1 $ </p>
+                <h3>2. Aplicación y Cálculo</h3>
+                <p class="formula-box">$$ W = 150 \, \text{N} \cdot 10 \, \text{m} \cdot \cos(0^\circ) = 1500 \, \text{J} $$</p>
                 <p class="resultado"> $ W = 1500 \, \text{J} $ </p>
-
-                <h3>5. Conclusión</h3>
-                <p>El trabajo realizado por el obrero es de <span class="valor">1500 Joules</span>. Esta es la cantidad de energía que el obrero transfirió a la caja para moverla.</p>
             </article>
         </section>
 
@@ -75,31 +63,46 @@
             <article>
                 <h2>Problema 2: Energía Cinética</h2>
                 <p class="enunciado">Un automóvil de 1200 kg acelera desde el reposo hasta una velocidad de 20 m/s. ¿Cuál es el cambio en su energía cinética?</p>
-                
-                <h3>1. ¿Qué nos piden?</h3>
-                <p>El <span class="importante">cambio en la Energía Cinética ($\Delta K$)</span>.</p>
-                
-                <h3>2. Datos Clave</h3>
-                <ul>
-                    <li>Masa ($m$): <span class="valor">1200 kg</span></li>
-                    <li>Velocidad inicial ($v_0$): <span class="valor">0 m/s</span> (porque parte <span class="importante">"del reposo"</span>).</li>
-                    <li>Velocidad final ($v_f$): <span class="valor">20 m/s</span></li>
-                </ul>
-
-                <h3>3. Principio Físico</h3>
-                <p>La energía cinética es la energía del movimiento. Su cambio se calcula restando la energía cinética inicial de la final.</p>
-                <p class="formula-box">$$ K = \frac{1}{2} m v^2 \quad \rightarrow \quad \Delta K = K_f - K_0 $$</p>
-
-                <h3>4. Resolución en la Pizarra</h3>
-                <p>Primero, la energía cinética inicial es cero, ya que el auto está quieto.</p>
-                <p class="calculo"> $ K_0 = \frac{1}{2} (1200 \, \text{kg}) (0 \, \text{m/s})^2 = 0 \, \text{J} $ </p>
-                <p>Luego, calculamos la energía cinética final con la velocidad de 20 m/s.</p>
-                <p class="calculo"> $ K_f = \frac{1}{2} (1200 \, \text{kg}) (20 \, \text{m/s})^2 = 600 \cdot 400 = 240,000 \, \text{J} $ </p>
-                <p>El cambio es la diferencia:</p>
+                <div class="razonamiento">
+                    <h3>Razonamiento del Profesor</h3>
+                    <p>Me piden el <span class="importante">cambio</span> en la energía cinética, $\Delta K$. Esto siempre significa "Final menos Inicial" ($\Delta K = K_f - K_0$). Mi plan es: <strong>1. Calcular</strong> $K_f$ con la velocidad final. <strong>2. Calcular</strong> $K_0$ con la velocidad inicial (que es cero). <strong>3. Restar</strong>.</p>
+                </div>
+                <h3>1. Cálculo de Energías</h3>
+                <p class="calculo">$K_0 = \frac{1}{2} m v_0^2 = \frac{1}{2} (1200)(0)^2 = 0 \, \text{J}$</p>
+                <p class="calculo">$K_f = \frac{1}{2} m v_f^2 = \frac{1}{2} (1200)(20)^2 = 600 \cdot 400 = 240,000 \, \text{J}$</p>
+                <h3>2. Cálculo del Cambio</h3>
+                <p class="formula-box">$$ \Delta K = K_f - K_0 $$</p>
                 <p class="resultado"> $ \Delta K = 240,000 \, \text{J} - 0 \, \text{J} = 240,000 \, \text{J} $ </p>
+            </article>
+        </section>
 
-                <h3>5. Conclusión</h3>
-                <p>El cambio en la energía cinética es de <span class="valor">240,000 Joules</span> (o 240 kJ). Esta es la energía que el motor tuvo que generar para poner el auto en movimiento a esa velocidad.</p>
+        <!-- Problema 3 -->
+        <section id="problema3">
+            <article>
+                <h2>Problema 3: Potencia</h2>
+                <p class="enunciado">Un ascensor tiene una potencia de 10kW. Si el ascensor puede levantar una masa máxima de 800 kg, ¿Cuánto tiempo tardaría en elevar esta masa 25m con velocidad constante?</p>
+                <div class="razonamiento">
+                    <h3>Razonamiento del Profesor</h3>
+                    <p>La pregunta es sobre el <span class="importante">tiempo (t)</span> y me dan la <span class="importante">Potencia (P)</span>. La fórmula que los relaciona es $P = W/t$. Para encontrar $t$, necesito $W$. El trabajo $W$ es el necesario para levantar la masa contra la gravedad. Mi plan: <strong>1. Calcular</strong> el trabajo $W=mgh$. <strong>2. Despejar</strong> el tiempo de la fórmula de potencia: $t = W/P$.</p>
+                </div>
+                <h3>1. Calcular el Trabajo para Levantar</h3>
+                <p class="calculo">$W = mgh = (800 \, \text{kg})(9.8 \, \text{m/s}^2)(25 \, \text{m}) = 196,000 \, \text{J}$</p>
+                <h3>2. Calcular el Tiempo</h3>
+                <p class="formula-box">$$ t = \frac{W}{P} = \frac{196,000 \, \text{J}}{10,000 \, \text{W}} $$</p>
+                <p class="resultado">$ t = 19.6 \, \text{s} $</p>
+            </article>
+        </section>
+
+        <!-- Problema 4 -->
+        <section id="problema4">
+            <article>
+                <h2>Problema 4: Teorema del Trabajo y la Energía</h2>
+                <p class="enunciado">Según el teorema del trabajo y energía cinética, si el trabajo neto realizado sobre un objeto es positivo, ¿Qué ocurre con su energía cinética?</p>
+                <div class="razonamiento">
+                    <h3>Razonamiento del Profesor</h3>
+                    <p>Esta es una pregunta conceptual directa sobre el teorema $W_{neto} = \Delta K$. Si el lado izquierdo ($W_{neto}$) es positivo, el lado derecho ($\Delta K$) también debe serlo. Un $\Delta K$ positivo significa que la energía cinética final es mayor que la inicial. Por lo tanto, aumenta.</p>
+                </div>
+                <p class="resultado">La respuesta es (c) aumenta.</p>
             </article>
         </section>
 
@@ -108,69 +111,93 @@
             <article>
                 <h2>Problema 5: Plano Inclinado con Fricción</h2>
                 <p class="enunciado">Un bloque de 3 kg, en reposo, se mueve 2 m hacia arriba de una pendiente de 37° por una fuerza de 40 N. El coeficiente de roce es 0.100. Calcule: a) W de la fuerza, b) W de la gravedad, c) W de la fricción, d) velocidad final.</p>
-                
                 <canvas id="canvas-problema5" width="500" height="350"></canvas>
-
+                <div class="razonamiento">
+                    <h3>Plan de Ataque del Profesor</h3>
+                    <p>La pregunta final es la <span class="importante">velocidad</span>. La herramienta que conecta fuerzas, distancia y velocidad es el <span class="importante">Teorema del Trabajo y la Energía</span>: $W_{neto} = \Delta K$. Mi estrategia es: <strong>1. Calcular</strong> el trabajo de cada fuerza. <strong>2. Sumarlos</strong> para obtener el Trabajo Neto. <strong>3. Igualar</strong> a $\Delta K$ y despejar $v_f$.</p>
+                </div>
                 <h3>a) Trabajo de la Fuerza Aplicada ($W_F$)</h3>
-                <p>La fuerza empuja en la misma dirección del desplazamiento.</p>
                 <p class="resultado">$ W_F = F \cdot d = 40 \, \text{N} \cdot 2 \, \text{m} = 80 \, \text{J} $</p>
-
                 <h3>b) Trabajo de la Gravedad ($W_g$)</h3>
-                <p>La gravedad se opone al movimiento ascendente, por lo que su trabajo es <span class="importante">negativo</span>. Solo importa la altura vertical ($h = d \cdot \sin(\theta)$).</p>
-                <p class="calculo">$ h = 2 \cdot \sin(37^\circ) \approx 1.204 \, \text{m} $</p>
+                <p><strong>Paso 1:</strong> Calculo la altura vertical $h$ <strong>para poder</strong> usar $W_g = -mgh$.</p>
+                <p class="calculo">$ h = d \cdot \sin(37^\circ) \approx 1.204 \, \text{m} $</p>
                 <p class="resultado">$ W_g = -mgh = -3 \cdot 9.8 \cdot 1.204 \approx -35.4 \, \text{J} $</p>
-
                 <h3>c) Trabajo de la Fricción ($W_{fric}$)</h3>
-                <p>La fricción también se opone al movimiento. Primero calculamos la Fuerza Normal ($N$).</p>
-                <p class="calculo">$ N = mg \cos(\theta) = 3 \cdot 9.8 \cdot \cos(37^\circ) \approx 23.49 \, \text{N} $</p>
-                <p class="calculo">$ f_k = \mu_k \cdot N = 0.100 \cdot 23.49 \, \text{N} \approx 2.35 \, \text{N} $</p>
-                <p class="resultado">$ W_{fric} = -f_k \cdot d = -2.35 \cdot 2 = -4.7 \, \text{J} $</p>
-
+                <p><strong>Paso 1:</strong> Necesito la Fuerza Normal $N$ <strong>para poder</strong> calcular la fricción $f_k = \mu_k N$.</p>
+                <p class="calculo">$ N = mg \cos(37^\circ) \approx 23.49 \, \text{N} $</p>
+                <p><strong>Paso 2:</strong> Ahora calculo el trabajo de la fricción (siempre negativo si se opone al movimiento).</p>
+                <p class="resultado">$ W_{fric} = -f_k \cdot d = -(0.100 \cdot 23.49) \cdot 2 \approx -4.7 \, \text{J} $</p>
                 <h3>d) Velocidad Final ($v_f$)</h3>
-                <p>Usamos el <span class="importante">Teorema del Trabajo y la Energía</span>: el trabajo neto es igual al cambio en la energía cinética.</p>
-                <p class="formula-box">$$ W_{neto} = \Delta K = K_f - K_0 $$</p>
-                <p class="calculo">$ W_{neto} = W_F + W_g + W_{fric} = 80 - 35.4 - 4.7 = 39.9 \, \text{J} $</p>
-                <p class="calculo">$ 39.9 \, \text{J} = \frac{1}{2} m v_f^2 - 0 $</p>
-                <p class="calculo">$ v_f = \sqrt{\frac{2 \cdot W_{neto}}{m}} = \sqrt{\frac{2 \cdot 39.9}{3}} $</p>
-                <p class="resultado">$ v_f \approx 5.16 \, \text{m/s} $</p>
+                <p><strong>Paso final:</strong> Sumo los trabajos y aplico el teorema.</p>
+                <p class="calculo">$ W_{neto} = 80 - 35.4 - 4.7 = 39.9 \, \text{J} $</p>
+                <p class="formula-box">$$ W_{neto} = \frac{1}{2} m v_f^2 \implies v_f = \sqrt{\frac{2 \cdot W_{neto}}{m}} $$</p>
+                <p class="resultado">$ v_f = \sqrt{\frac{2 \cdot 39.9}{3}} \approx 5.16 \, \text{m/s} $</p>
+            </article>
+        </section>
+
+        <!-- Problema 6 -->
+        <section id="problema6">
+            <article>
+                <h2>Problema 6: Conservación de la Energía</h2>
+                <p class="enunciado">Un bloque de 2 kg es impulsado por un resorte (k=200 N/m). Determine: a) la compresión del resorte si pasa por el punto B (cima del rizo, r=1.5m) con la mínima velocidad, b) la fuerza en el punto C (lateral), c) la altura final que alcanza.</p>
+                <canvas id="canvas-problema6" width="600" height="400"></canvas>
+                <div class="razonamiento">
+                    <h3>Plan de Ataque del Profesor</h3>
+                    <p>Este es un problema de <span class="importante">Conservación de la Energía Mecánica</span> porque no hay fricción. La energía total en el inicio (resorte comprimido) es la misma que en los puntos B, C y en la altura final. Mi plan es:
+                        <ol>
+                            <li><strong>Parte (a):</strong> Trabajar "hacia atrás". Usar la condición de "velocidad mínima" en B para encontrar la energía en B. Luego igualar esa energía a la energía inicial del resorte para encontrar la compresión $x$.</li>
+                            <li><strong>Parte (b):</strong> Usar la energía inicial (ya conocida) y conservarla hasta el punto C para encontrar la velocidad en C. Luego usar la segunda ley de Newton (fuerza centrípeta) para hallar la fuerza normal.</li>
+                            <li><strong>Parte (c):</strong> Usar la energía inicial y conservarla hasta el punto final, donde toda la energía se convierte en potencial gravitatoria ($mgh_f$), para despejar la altura final.</li>
+                        </ol>
+                    </p>
+                </div>
+                <h3>a) Compresión del Resorte ($x$)</h3>
+                <p><strong>Paso 1:</strong> "Velocidad mínima" en B significa que la normal es cero y la gravedad provee la fuerza centrípeta.</p>
+                <p class="calculo">$mg = \frac{mv_B^2}{R} \implies v_B^2 = gR = 9.8 \cdot 1.5 = 14.7 \, \text{m}^2/\text{s}^2$</p>
+                <p><strong>Paso 2:</strong> Conservación de Energía (Inicio $\rightarrow$ B). La altura de B es $2R=3$ m.</p>
+                <p class="formula-box">$$ E_{resorte, inicial} = E_{cinética, B} + E_{potencial, B} $$</p>
+                <p class="calculo">$\frac{1}{2}kx^2 = \frac{1}{2}mv_B^2 + mg(2R)$</p>
+                <p class="calculo">$\frac{1}{2}(200)x^2 = \frac{1}{2}(2)(14.7) + (2)(9.8)(3) \implies 100x^2 = 14.7 + 58.8 = 73.5$</p>
+                <p class="resultado">$x = \sqrt{0.735} \approx 0.857 \, \text{m}$</p>
+
+                <h3>b) Fuerza en el Punto C</h3>
+                <p><strong>Paso 1:</strong> Conservo la energía desde el inicio (que ya sé que es 73.5 J) hasta C (altura $h=R=1.5$ m) <strong>para hallar</strong> la velocidad en C.</p>
+                <p class="calculo">$E_{inicial} = E_{cinética, C} + E_{potencial, C} \implies 73.5 = \frac{1}{2}(2)v_C^2 + (2)(9.8)(1.5)$</p>
+                <p class="calculo">$73.5 = v_C^2 + 29.4 \implies v_C^2 = 44.1 \, \text{m}^2/\text{s}^2$</p>
+                <p><strong>Paso 2:</strong> En C, la fuerza normal es la fuerza centrípeta. La uso <strong>para hallar</strong> la magnitud de la fuerza.</p>
+                <p class="resultado">$N_C = \frac{mv_C^2}{R} = \frac{2 \cdot 44.1}{1.5} = 58.8 \, \text{N}$ (hacia el centro del rizo)</p>
+
+                <h3>c) Altura Final ($h_f$)</h3>
+                <p><strong>Paso único:</strong> Conservo la energía desde el inicio hasta el final. En el punto más alto, la velocidad es cero, así que toda la energía inicial es potencial.</p>
+                <p class="calculo">$E_{inicial} = E_{potencial, final} \implies 73.5 \, \text{J} = mgh_f = (2)(9.8)h_f$</p>
+                <p class="resultado">$h_f = \frac{73.5}{19.6} = 3.75 \, \text{m}$</p>
             </article>
         </section>
 
         <!-- Problema 7 -->
         <section id="problema7">
             <article>
-                <h2>Problema 7: Trabajo de una Fuerza Variable (Gráfico)</h2>
-                <p class="enunciado">Una fuerza variable actúa sobre una partícula. La gráfica muestra la Fuerza vs. Posición. Calcule el trabajo neto realizado desde x=0 m hasta x=5 m.</p>
-                
+                <h2>Problema 7: Trabajo de una Fuerza Variable</h2>
+                <p class="enunciado">La gráfica muestra la Fuerza vs. Posición. Calcule el trabajo neto realizado desde x=0 m hasta x=5 m.</p>
                 <canvas id="canvas-problema7" width="500" height="300"></canvas>
-
-                <h3>1. Principio Físico Clave</h3>
-                <p>El trabajo realizado por una fuerza variable es igual al <span class="importante">área bajo la curva</span> en un gráfico de Fuerza vs. Posición.</p>
-
-                <h3>2. Resolución en la Pizarra</h3>
-                <p>Dividimos el área total en dos figuras geométricas que conocemos:</p>
-                <ul>
-                    <li><span class="area1">Área 1 (de x=0 a x=4):</span> Un rectángulo.</li>
-                    <li><span class="area2">Área 2 (de x=4 a x=5):</span> Un triángulo.</li>
-                </ul>
-
-                <p>Calculamos cada área por separado:</p>
-                <p class="calculo"><span class="area1">Área 1 (Rectángulo)</span> = base × altura = $4 \, \text{m} \times 10 \, \text{N} = 40 \, \text{J}$</p>
-                <p class="calculo"><span class="area2">Área 2 (Triángulo)</span> = $\frac{1}{2}$ × base × altura = $\frac{1}{2} \times (5-4) \, \text{m} \times 10 \, \text{N} = 5 \, \text{J}$</p>
-                
-                <p>El trabajo neto es la suma de estas áreas.</p>
+                <div class="razonamiento">
+                    <h3>Razonamiento del Profesor</h3>
+                    <p>La fuerza no es constante. El principio clave es que <span class="importante">el trabajo es el ÁREA bajo la curva</span> en un gráfico F vs. x. Mi plan: <strong>1. Dividir</strong> el área en figuras simples (rectángulo y triángulo). <strong>2. Calcular</strong> el área de cada una. <strong>3. Sumar</strong> las áreas.</p>
+                </div>
+                <h3>1. Cálculo de Áreas</h3>
+                <p class="calculo"><span class="area1">Área 1 (Rectángulo, 0-4m)</span> = $b \times h = 4 \, \text{m} \times 10 \, \text{N} = 40 \, \text{J}$</p>
+                <p class="calculo"><span class="area2">Área 2 (Triángulo, 4-5m)</span> = $\frac{1}{2} b \times h = \frac{1}{2} \times 1 \, \text{m} \times 10 \, \text{N} = 5 \, \text{J}$</p>
+                <h3>2. Suma para el Trabajo Neto</h3>
                 <p class="formula-box">$$ W_{neto} = W_1 + W_2 $$</p>
-                <p class="resultado">$ W_{neto} = 40 \, \text{J} + 5 \, \text{J} = 45 \, \text{J} $</p>
-
-                <h3>3. Conclusión</h3>
-                <p>El trabajo neto realizado sobre la partícula en todo el recorrido es de <span class="valor">45 Joules</span>.</p>
+                <p class="resultado">$ W_{neto} = 40 \, \text{J} + 5 \, \text{J} = 45 \, \text{J} $ </p>
             </article>
         </section>
     </main>
 
     <footer>
-        <p>Resolución creada con HTML5, CSS3 y JavaScript (Canvas) para una explicación visual.</p>
+        <p>Resolución completa creada con HTML5, CSS3 y JavaScript (Canvas) para una explicación visual.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
