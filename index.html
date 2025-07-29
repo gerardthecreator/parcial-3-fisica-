@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizarra de Física | Resolución de Examen: Trabajo y Energía</title>
+    
+    <!-- Google Fonts: Anton para títulos, Oswald para texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax v3 para renderizar fórmulas matemáticas -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+    <!-- Nuestro CSS y JS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Pizarra de Física: Examen de Trabajo y Energía</h1>
+        <p>Análisis y resolución paso a paso de cada problema.</p>
+    </header>
+
+    <main>
+        <!-- Problema 1 -->
+        <section id="problema1">
+            <article>
+                <h2>Problema 1: Trabajo de una Fuerza Constante</h2>
+                <p class="enunciado">Un obrero empuja una caja de 60kg una distancia de 10 m sobre una superficie horizontal, aplicando una fuerza constante de 150 N en la dirección del movimiento. ¿Cuál es el trabajo realizado por el obrero sobre la caja?</p>
+                
+                <h3>1. ¿Qué nos piden?</h3>
+                <p>Calcular el <span class="importante">Trabajo (W)</span> que realiza la fuerza del obrero.</p>
+                
+                <h3>2. Datos Clave</h3>
+                <ul>
+                    <li>Fuerza aplicada ($F$): <span class="valor">150 N</span></li>
+                    <li>Distancia ($d$): <span class="valor">10 m</span></li>
+                    <li>Ángulo ($\theta$): <span class="valor">0°</span> (la fuerza y el movimiento van en la <span class="importante">misma dirección</span>).</li>
+                    <li>Masa ($m$): 60 kg (¡Ojo! Este es un <span class="distractor">distractor</span> para esta pregunta).</li>
+                </ul>
+
+                <h3>3. Principio Físico</h3>
+                <p>Usamos la definición fundamental de Trabajo para una fuerza constante. El trabajo es la energía transferida por una fuerza a lo largo de un desplazamiento.</p>
+                <p class="formula-box">$$ W = F \cdot d \cdot \cos(\theta) $$</p>
+
+                <h3>4. Resolución en la Pizarra</h3>
+                <p>Sustituimos los valores en nuestra ecuación. Como el ángulo $\theta$ es 0°, su coseno es 1, lo que simplifica el cálculo.</p>
+                <p class="calculo"> $ W = 150 \, \text{N} \cdot 10 \, \text{m} \cdot \cos(0^\circ) $ </p>
+                <p class="calculo"> $ W = 150 \cdot 10 \cdot 1 $ </p>
+                <p class="resultado"> $ W = 1500 \, \text{J} $ </p>
+
+                <h3>5. Conclusión</h3>
+                <p>El trabajo realizado por el obrero es de <span class="valor">1500 Joules</span>. Esta es la cantidad de energía que el obrero transfirió a la caja para moverla.</p>
+            </article>
+        </section>
+
+        <!-- Problema 2 -->
+        <section id="problema2">
+            <article>
+                <h2>Problema 2: Energía Cinética</h2>
+                <p class="enunciado">Un automóvil de 1200 kg acelera desde el reposo hasta una velocidad de 20 m/s. ¿Cuál es el cambio en su energía cinética?</p>
+                
+                <h3>1. ¿Qué nos piden?</h3>
+                <p>El <span class="importante">cambio en la Energía Cinética ($\Delta K$)</span>.</p>
+                
+                <h3>2. Datos Clave</h3>
+                <ul>
+                    <li>Masa ($m$): <span class="valor">1200 kg</span></li>
+                    <li>Velocidad inicial ($v_0$): <span class="valor">0 m/s</span> (porque parte <span class="importante">"del reposo"</span>).</li>
+                    <li>Velocidad final ($v_f$): <span class="valor">20 m/s</span></li>
+                </ul>
+
+                <h3>3. Principio Físico</h3>
+                <p>La energía cinética es la energía del movimiento. Su cambio se calcula restando la energía cinética inicial de la final.</p>
+                <p class="formula-box">$$ K = \frac{1}{2} m v^2 \quad \rightarrow \quad \Delta K = K_f - K_0 $$</p>
+
+                <h3>4. Resolución en la Pizarra</h3>
+                <p>Primero, la energía cinética inicial es cero, ya que el auto está quieto.</p>
+                <p class="calculo"> $ K_0 = \frac{1}{2} (1200 \, \text{kg}) (0 \, \text{m/s})^2 = 0 \, \text{J} $ </p>
+                <p>Luego, calculamos la energía cinética final con la velocidad de 20 m/s.</p>
+                <p class="calculo"> $ K_f = \frac{1}{2} (1200 \, \text{kg}) (20 \, \text{m/s})^2 = 600 \cdot 400 = 240,000 \, \text{J} $ </p>
+                <p>El cambio es la diferencia:</p>
+                <p class="resultado"> $ \Delta K = 240,000 \, \text{J} - 0 \, \text{J} = 240,000 \, \text{J} $ </p>
+
+                <h3>5. Conclusión</h3>
+                <p>El cambio en la energía cinética es de <span class="valor">240,000 Joules</span> (o 240 kJ). Esta es la energía que el motor tuvo que generar para poner el auto en movimiento a esa velocidad.</p>
+            </article>
+        </section>
+
+        <!-- Problema 5 -->
+        <section id="problema5">
+            <article>
+                <h2>Problema 5: Plano Inclinado con Fricción</h2>
+                <p class="enunciado">Un bloque de 3 kg, en reposo, se mueve 2 m hacia arriba de una pendiente de 37° por una fuerza de 40 N. El coeficiente de roce es 0.100. Calcule: a) W de la fuerza, b) W de la gravedad, c) W de la fricción, d) velocidad final.</p>
+                
+                <canvas id="canvas-problema5" width="500" height="350"></canvas>
+
+                <h3>a) Trabajo de la Fuerza Aplicada ($W_F$)</h3>
+                <p>La fuerza empuja en la misma dirección del desplazamiento.</p>
+                <p class="resultado">$ W_F = F \cdot d = 40 \, \text{N} \cdot 2 \, \text{m} = 80 \, \text{J} $</p>
+
+                <h3>b) Trabajo de la Gravedad ($W_g$)</h3>
+                <p>La gravedad se opone al movimiento ascendente, por lo que su trabajo es <span class="importante">negativo</span>. Solo importa la altura vertical ($h = d \cdot \sin(\theta)$).</p>
+                <p class="calculo">$ h = 2 \cdot \sin(37^\circ) \approx 1.204 \, \text{m} $</p>
+                <p class="resultado">$ W_g = -mgh = -3 \cdot 9.8 \cdot 1.204 \approx -35.4 \, \text{J} $</p>
+
+                <h3>c) Trabajo de la Fricción ($W_{fric}$)</h3>
+                <p>La fricción también se opone al movimiento. Primero calculamos la Fuerza Normal ($N$).</p>
+                <p class="calculo">$ N = mg \cos(\theta) = 3 \cdot 9.8 \cdot \cos(37^\circ) \approx 23.49 \, \text{N} $</p>
+                <p class="calculo">$ f_k = \mu_k \cdot N = 0.100 \cdot 23.49 \, \text{N} \approx 2.35 \, \text{N} $</p>
+                <p class="resultado">$ W_{fric} = -f_k \cdot d = -2.35 \cdot 2 = -4.7 \, \text{J} $</p>
+
+                <h3>d) Velocidad Final ($v_f$)</h3>
+                <p>Usamos el <span class="importante">Teorema del Trabajo y la Energía</span>: el trabajo neto es igual al cambio en la energía cinética.</p>
+                <p class="formula-box">$$ W_{neto} = \Delta K = K_f - K_0 $$</p>
+                <p class="calculo">$ W_{neto} = W_F + W_g + W_{fric} = 80 - 35.4 - 4.7 = 39.9 \, \text{J} $</p>
+                <p class="calculo">$ 39.9 \, \text{J} = \frac{1}{2} m v_f^2 - 0 $</p>
+                <p class="calculo">$ v_f = \sqrt{\frac{2 \cdot W_{neto}}{m}} = \sqrt{\frac{2 \cdot 39.9}{3}} $</p>
+                <p class="resultado">$ v_f \approx 5.16 \, \text{m/s} $</p>
+            </article>
+        </section>
+
+        <!-- Problema 7 -->
+        <section id="problema7">
+            <article>
+                <h2>Problema 7: Trabajo de una Fuerza Variable (Gráfico)</h2>
+                <p class="enunciado">Una fuerza variable actúa sobre una partícula. La gráfica muestra la Fuerza vs. Posición. Calcule el trabajo neto realizado desde x=0 m hasta x=5 m.</p>
+                
+                <canvas id="canvas-problema7" width="500" height="300"></canvas>
+
+                <h3>1. Principio Físico Clave</h3>
+                <p>El trabajo realizado por una fuerza variable es igual al <span class="importante">área bajo la curva</span> en un gráfico de Fuerza vs. Posición.</p>
+
+                <h3>2. Resolución en la Pizarra</h3>
+                <p>Dividimos el área total en dos figuras geométricas que conocemos:</p>
+                <ul>
+                    <li><span class="area1">Área 1 (de x=0 a x=4):</span> Un rectángulo.</li>
+                    <li><span class="area2">Área 2 (de x=4 a x=5):</span> Un triángulo.</li>
+                </ul>
+
+                <p>Calculamos cada área por separado:</p>
+                <p class="calculo"><span class="area1">Área 1 (Rectángulo)</span> = base × altura = $4 \, \text{m} \times 10 \, \text{N} = 40 \, \text{J}$</p>
+                <p class="calculo"><span class="area2">Área 2 (Triángulo)</span> = $\frac{1}{2}$ × base × altura = $\frac{1}{2} \times (5-4) \, \text{m} \times 10 \, \text{N} = 5 \, \text{J}$</p>
+                
+                <p>El trabajo neto es la suma de estas áreas.</p>
+                <p class="formula-box">$$ W_{neto} = W_1 + W_2 $$</p>
+                <p class="resultado">$ W_{neto} = 40 \, \text{J} + 5 \, \text{J} = 45 \, \text{J} $</p>
+
+                <h3>3. Conclusión</h3>
+                <p>El trabajo neto realizado sobre la partícula en todo el recorrido es de <span class="valor">45 Joules</span>.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Resolución creada con HTML5, CSS3 y JavaScript (Canvas) para una explicación visual.</p>
+    </footer>
+
+</body>
+</html>
